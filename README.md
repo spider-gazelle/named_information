@@ -38,10 +38,10 @@ Works with binary data
 ```crystal
 require "named_information"
 
-hash = Hash.new(bytes)
+hash = NamedInformation::Hash.new(bytes)
 hash.to_slice
 
-hash = Hash.new(uint128)
+hash = NamedInformation::Hash.new(uint128)
 hash.to_u128
 ```
 
