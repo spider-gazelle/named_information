@@ -11,7 +11,7 @@ class NamedInformation::BinHash < BinData
     bits 6, :suite_id
   end
 
-  bytes :hash_value, length: ->{
+  field hash_value : Bytes, length: ->{
     bits = ALGORITHM_ID[suite_id.to_s][:truncate] || 256
     bits // 8
   }
